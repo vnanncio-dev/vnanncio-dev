@@ -1,66 +1,52 @@
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=6DB33F&center=true&vCenter=true&width=600&lines=Java+Backend+Developer;Spring+Boot+Learner;Building+REST+APIs;Always+Learning+New+Things" />
-</p>
+# API de Login em Java (Spring Boot)
 
+Projeto simples de autenticação para estudar backend com Java.
 
+## Tecnologias
 
-# 👩🏻‍💻 Vinicius Venancio
+- Java 17
+- Spring Boot 3
+- Maven
 
-**`Futuro Desenvolvedor Backend`**
+## Como executar
 
-Tenho 16 anos e estou começando minha jornada na programação 💻  
-Atualmente estudando **Java Backend** e construindo meus primeiros projetos.
+```bash
+mvn spring-boot:run
+```
 
----
+A API sobe em `http://localhost:8080`.
 
-## 🚀 Tecnologias que estou aprendendo
+## Endpoint de login
 
-<p>
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring&logoColor=white"/>
-  <img src="https://img.shields.io/badge/REST_API-000000?style=for-the-badge&logo=fastapi&logoColor=white"/>
-  <img src="https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white"/>
-  <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
-</p>
+### `POST /api/login`
 
----
+**Request**
 
-## 📚 Objetivo
+```json
+{
+  "username": "vinicius",
+  "password": "123456"
+}
+```
 
-Aprender desenvolvimento backend e conseguir minha primeira oportunidade na área 👨‍💻
+**Response (200)**
 
----
+```json
+{
+  "token": "<token-gerado>",
+  "message": "Login realizado com sucesso"
+}
+```
 
-## 📌 Projetos (em breve)
+**Response (401)**
 
-Estou estudando e logo vou subir meus primeiros projetos aqui:
-- API de Login 🔐  
-- API de Tarefas 📋  
+```json
+{
+  "message": "Usuário ou senha inválidos"
+}
+```
 
----
+## Usuários de teste
 
-## 🎯 Atualmente estudando
-
-- Lógica de programação  
-- Java básico/intermediário  
-- Spring Boot  
-
----
-
-⭐ Estou no começo, mas evoluindo todo dia!
-
----
-
-<p align="center">
-  <img src="https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif" width="500"/>
-</p>
-
-
-
-
-
-
-
-
+- `vinicius` / `123456`
+- `admin` / `admin123`
